@@ -1,0 +1,34 @@
+<head>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script>
+		$(function(){
+			$( document ).tooltip();
+		});
+	</script>
+	<style>
+		label{
+			display:inline-block;
+			width: 5em;
+		}
+	</style>
+</head>
+<body>
+	<div class= 'topbar'>
+		<h1>Welcome <%= @user.first_name.capitalize%> 
+		<a class='btn btn-info pull-right' href="/signout">Log out</a></h1>
+	</div>
+	<div class = 'container'>	
+		<div class = 'row'>
+			<div class='col-xs-12'>
+				<h3>Choose Device Mode</h3>
+				<br>
+				<a class='btn btn-primary btn-lg btn-block' href="/master" title='Manage your pictures'>Master</a>
+				<br>
+				<a class='btn btn-warning btn-lg btn-block' href="" title='Display your slideshows'>Slave</a>
+			</div>
+		</div>
+	</div>
+</body>

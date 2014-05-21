@@ -1,0 +1,49 @@
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script>
+		$(function(){
+			$( document ).tooltip();
+		});
+	</script>
+	<style>
+		label{
+			display:inline-block;
+			width: 5em;
+		}
+	</style>
+</head>
+<body>
+	<div class='topbar'>
+		<h4>Picture Management<a class='btn btn-info btn-xs pull-right' href="/signout">Log out</a> 
+		</h4>
+	</div>
+
+	<div class='container'>
+		<div class='row'>
+			<div class='col-xs-12 col-md-6'><br>
+				<a class='btn btn-primary btn-block btn-lg' href="/pictures" title='Manage your pictures'>Pictures</a>
+			</div>
+			<div class='col-xs-12 col-md-6'><br>
+				<a class='btn btn-primary btn-block btn-lg' href="/slideshows" title='Make a slideshow'>Slideshows</a>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-md-6'><br>
+				<a class='btn btn-primary btn-block btn-lg' href="/layouts" title='Create a picture with a layout'>Layouts</a>
+			</div>
+			<div class='col-xs-12 col-md-6'><br>
+				<a class='btn btn-primary btn-block btn-lg' href="/settings" title='Settings and options'>Settings</a>
+			</div>
+		</div>
+		<div class='row'> 
+			<div class= 'col-xs-12 col-md-12'><br>
+				<a class='btn btn-primary btn-block btn-lg' href="/users/<%= @user.id%>">Mode</a>
+			</div>
+		</div>
+
+	</div>
+</body>
